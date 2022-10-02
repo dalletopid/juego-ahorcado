@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <main class="Ahorcado">
+        <selection class="logo">
+          <img class="logoImg" src="imagenes/logo.svg" alt="logo de alura">
+          <h1 class="title" data-text="Juego del Ahorcado">Juego del Ahorcado</h1>
+        </selection>
+       
+        <selection class="botones-home" id="div-desaparece">
+            <button class="btn-iniciar" type="buttom" id="iniciar-juego" onclick="iniciarJuego()" >Iniciar juego</button>
+            <button class="btn-agregar-palabra" type="buttom" id="agregar-palabra" onclick="agregarPalabra()">Agregar nueva palabra</button>
+        </selection>
+        
+        <selection id="div-aparece-agregar" class="aparece-agregar">
+            <textarea placeholder="Ingrese el texto aquí..." class="campo-texto" id="texto-recibido"></textarea>
+    
+            <div class="mensaje-advertencia">
+                <p class="mensaje-letras">Solo letras y sin acentos</p>
+            </div>
+            
+            <div class="botones-para-agregar-palabra">
+               <button class="guardar-empezar" type="submit" id="guardar-empezar" onclick="guardarEmpezar()">Guardar y Jugar</button>
+               <button class="cancelar" type="submit" id="cancelar" onclick="cancelar()">Cancelar</button>
+            </div>
+           
+    
+        </selection>
+        
+        <selection class="canvas" id="div-aparece-ahorcado">
+           
+            <div class="subrayado">
+              <canvas id="horca" width="600" height="600"></canvas>
+            </div>
+            
+            <div class="botones-div-canvas">
+                <button class="btn-nuevo-juego" type="submit" id="nuevo-juego" onclick="nuevoJuego()">Nuevo juego</button>
+                <button class="btn-desistir" type="submit" value="" id="desistir" onclick="desistir()">Desistir</button>
+            </div>
+        </selection>
+    </main>
+    <script src="javascrip/horca.js"></script>
+    <script src="javascrip/canvas.js"></script>
+</body>
+</html>
